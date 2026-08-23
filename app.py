@@ -9,4 +9,5 @@ def home():
     return f"<h1>今日の運勢</h1><h2>{result}！</h2>"
 
 if __name__ == "__main__":
-    app.run()
+    import os
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
